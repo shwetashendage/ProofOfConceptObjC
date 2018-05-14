@@ -19,11 +19,12 @@
 //SDWebImage
 #import <SDWebImage/UIImageView+WebCache.h>
 
-@interface POCViewController ()
+@interface POCViewController (){
+    UIRefreshControl *refreshControl;
+}
 @property (nonatomic, strong) NSMutableArray *factsArray;
 @property (nonatomic, strong) POCService *service;
 @property (nonatomic, strong) POCInterNetConnectionService *internetConnection;
-
 
 @end
 
@@ -43,6 +44,17 @@
     self.tableView.estimatedRowHeight = 120;
     self.tableView.separatorInset = UIEdgeInsetsZero;
     
+    if (@available(iOS 10.0, *)) {
+        self.tableView.refreshControl = [[UIRefreshControl alloc] init];
+        [self.tableView.refreshControl addTarget:self action:@selector(pullToRefresh) forControlEvents:UIControlEventValueChanged];
+        
+    } else {
+        // Fallback on earlier versions
+        refreshControl = [[UIRefreshControl alloc] init];
+        [self.tableView addSubview:refreshControl];
+        [refreshControl addTarget:self action:@selector(pullToRefresh) forControlEvents:UIControlEventValueChanged];
+    }
+    
     self.factsArray = [[NSMutableArray alloc] init];
     service = [[POCService alloc] init];
     internetConnection = [[POCInterNetConnectionService alloc] init];
@@ -59,7 +71,7 @@
             }
             //Handle Error
             if (error) {
-                
+                [self showAlert];
             }
             else{
                 self.factsArray = array;
@@ -72,7 +84,58 @@
     
     
 }
+#pragma mark Refresh Control
 
+- (void)pullToRefresh{
+    //Get Data
+    if ([internetConnection checkFornetConnection]) {
+        [self showProgressView];
+        [service getDataWithCompletionHandler:^(NSMutableArray *array, NSString *headerTitle, NSString *error){
+            
+            [self hideProgressView];
+            
+            if (@available(iOS 10.0, *)) {
+                [self.tableView.refreshControl endRefreshing];
+            } else {
+                // Fallback on earlier versions
+                [refreshControl endRefreshing];
+            }
+            if (headerTitle) {
+                self.title = headerTitle;
+            }
+            //Handle Error
+            if (error) {
+                [self showAlert];
+            }
+            else{
+                self.factsArray = array;
+                //Reload Table
+                [self.tableView reloadData];
+                
+            }
+        }];
+    }
+}
+- (void)showAlert{
+    
+    UIAlertController * alert = [UIAlertController
+                                 alertControllerWithTitle:@""
+                                 message:@"Error occurred."
+                                 preferredStyle:UIAlertControllerStyleAlert];
+    
+    
+    UIAlertAction* okButton = [UIAlertAction
+                               actionWithTitle:@"OK"
+                               style:UIAlertActionStyleDefault
+                               handler:^(UIAlertAction * action) {
+                                   
+                               }];
+    
+    
+    [alert addAction:okButton];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
 #pragma mark MBProgressHUD
 
 - (void)showProgressView{
