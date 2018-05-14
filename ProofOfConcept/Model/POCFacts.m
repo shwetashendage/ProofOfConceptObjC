@@ -15,14 +15,14 @@
     if(self){
         self.title = title;
         
-        if(description != nil){
+        if(description != nil && ![description isKindOfClass:[NSNull class]]){
             self.descriptionString = description;
         }else{
             self.descriptionString = @"";
             
         }
         
-        if(imageHref != nil){
+        if(imageHref != nil && ![imageHref isKindOfClass:[NSNull class]]){
             self.imageHref = imageHref;
         }else{
             self.imageHref = POCNoImage;

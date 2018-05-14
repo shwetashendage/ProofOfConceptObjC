@@ -88,14 +88,20 @@
         [[jsonDictionary objectForKey:@"rows"] enumerateObjectsUsingBlock:^(NSDictionary *factsDictinary, NSUInteger index, BOOL *stop){
             
             
-            if ([factsDictinary objectForKey:@"title"] != nil) {
+            if ([factsDictinary objectForKey:@"title"] != nil && ![[factsDictinary objectForKey:@"title"] isKindOfClass:[NSNull class]]) {
                 
                 [self.factsArray addObject:[[POCFacts alloc] initWithTitle:[factsDictinary objectForKey:@"title"] description:[factsDictinary objectForKey:@"description"] imageHref:[factsDictinary objectForKey:@"imageHref"]]];
                 
             }
+            else{
+                NSLog(@"Not valid");
+            }
+            
             
             
         }];
+    }else{
+        NSLog(@"Object count 0");
     }
     
 }

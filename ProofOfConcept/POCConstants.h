@@ -13,6 +13,8 @@
 
 #define POCNoImage @"No Image"
 
+#define POCCellID @"pocCell"
+
 
 
 #endif /* POCConstants_h */

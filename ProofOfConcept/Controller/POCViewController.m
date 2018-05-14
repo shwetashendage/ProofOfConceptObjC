@@ -9,7 +9,7 @@
 #import "POCViewController.h"
 #import "POCConstants.h"
 #import "POCService.h"
-
+#import "POCTableViewCell.h"
 //Progress View
 #import "MBProgressHUD.h"
 
@@ -33,6 +33,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"POC";
+    
+    //Table View
+    [self.tableView registerClass:[POCTableViewCell self] forCellReuseIdentifier:POCCellID];
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 120;
+    self.tableView.separatorInset = UIEdgeInsetsZero;
+    
     self.factsArray = [[NSMutableArray alloc] init];
     service = [[POCService alloc] init];
     internetConnection = [[POCInterNetConnectionService alloc] init];
@@ -52,7 +59,9 @@
                 
             }
             else{
+                self.factsArray = array;
                 //Reload Table
+                [self.tableView reloadData];
                 
             }
         }];
@@ -75,6 +84,23 @@
     
 }
 
+#pragma mark TableView Delegate
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
+    return self.factsArray.count;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    POCTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:POCCellID forIndexPath:indexPath];
+    POCFacts *fact = [self.factsArray objectAtIndex:indexPath.row];
+    cell.title.text = fact.title;
+    cell.description.text = fact.descriptionString;
+    cell.profileImageView.image = [UIImage imageNamed:@"default-user-image"];
+    
+    return cell;
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -28,6 +28,8 @@
 		E4D0F0BF20A9B97C006FB7F0 /* Reachability_Internet.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0F0BE20A9B97C006FB7F0 /* Reachability_Internet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E4D0F0C320A9B9E3006FB7F0 /* POCInterNetConnectionService.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0F0C220A9B9E3006FB7F0 /* POCInterNetConnectionService.m */; };
 		E4D0F0C520A9BC6B006FB7F0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4D0F0C420A9BC6B006FB7F0 /* SystemConfiguration.framework */; };
+		E4D0F0C820A9C138006FB7F0 /* POCTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0F0C720A9C138006FB7F0 /* POCTableViewCell.m */; };
+		E4D0F0C920A9C138006FB7F0 /* POCTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0F0C720A9C138006FB7F0 /* POCTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +96,8 @@
 		E4D0F0C120A9B9E3006FB7F0 /* POCInterNetConnectionService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = POCInterNetConnectionService.h; sourceTree = "<group>"; };
 		E4D0F0C220A9B9E3006FB7F0 /* POCInterNetConnectionService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = POCInterNetConnectionService.m; sourceTree = "<group>"; };
 		E4D0F0C420A9BC6B006FB7F0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E4D0F0C620A9C138006FB7F0 /* POCTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = POCTableViewCell.h; sourceTree = "<group>"; };
+		E4D0F0C720A9C138006FB7F0 /* POCTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = POCTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +194,7 @@
 				E4D0F06520A961B9006FB7F0 /* AppDelegate.h */,
 				E4D0F06620A961B9006FB7F0 /* AppDelegate.m */,
 				E4D0F09B20A996F3006FB7F0 /* Model */,
+				E4D0F0CA20A9C13F006FB7F0 /* View */,
 				E4D0F09A20A98A41006FB7F0 /* Controller */,
 				E4D0F0B520A9ABBE006FB7F0 /* Networking */,
 				E4D0F06E20A961B9006FB7F0 /* Assets.xcassets */,
@@ -264,6 +269,15 @@
 				E4D0F0BE20A9B97C006FB7F0 /* Reachability_Internet.m */,
 			);
 			path = Reachability;
+			sourceTree = "<group>";
+		};
+		E4D0F0CA20A9C13F006FB7F0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E4D0F0C620A9C138006FB7F0 /* POCTableViewCell.h */,
+				E4D0F0C720A9C138006FB7F0 /* POCTableViewCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -552,10 +566,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ProofOfConcept/Pods-ProofOfConcept-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -640,6 +656,7 @@
 			files = (
 				E4D0F09E20A99719006FB7F0 /* POCFacts.m in Sources */,
 				E4D0F0BF20A9B97C006FB7F0 /* Reachability_Internet.m in Sources */,
+				E4D0F0C820A9C138006FB7F0 /* POCTableViewCell.m in Sources */,
 				E4D0F06A20A961B9006FB7F0 /* POCViewController.m in Sources */,
 				E4D0F07520A961B9006FB7F0 /* main.m in Sources */,
 				E4D0F0C320A9B9E3006FB7F0 /* POCInterNetConnectionService.m in Sources */,
@@ -664,6 +681,7 @@
 			files = (
 				E4D0F0A020A99719006FB7F0 /* POCFacts.m in Sources */,
 				E4D0F0B320A9A66E006FB7F0 /* POCService.m in Sources */,
+				E4D0F0C920A9C138006FB7F0 /* POCTableViewCell.m in Sources */,
 				E4D0F08A20A961B9006FB7F0 /* ProofOfConceptUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
