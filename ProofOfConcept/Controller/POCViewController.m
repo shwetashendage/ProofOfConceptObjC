@@ -8,54 +8,43 @@
 
 #import "POCViewController.h"
 #import "POCConstants.h"
+#import "POCService.h"
 @interface POCViewController ()
-@property (nonatomic, strong) NSOperationQueue *backgroundqueue;
-@property (nonatomic, strong) NSMutableURLRequest *request;
-@property (nonatomic, strong) NSURL *url;
+@property (nonatomic, strong) NSMutableArray *factsArray;
+@property (nonatomic, strong) POCService *service;
+
 @end
 
 @implementation POCViewController
-@synthesize backgroundqueue;
-@synthesize request;
-@synthesize url;
+
+@synthesize factsArray;
+@synthesize service;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"POC";
+    self.factsArray = [[NSMutableArray alloc] init];
+    service = [[POCService alloc] init];
     
     //Get Data
-    [self getData];
-    
-}
+    [service getDataWithCompletionHandler:^(NSMutableArray *array, NSString *headerTitle, NSString *error){
 
-- (void)getData{
-    
-    if (!url) {
-        url = [NSURL URLWithString:POCUrl];
-    }
-    
-    if (!request) {
-        request = [[NSMutableURLRequest alloc] initWithURL:url];
-    }
-    
-    if (!backgroundqueue) {
-        backgroundqueue = [[NSOperationQueue alloc] init];
-    }
-    
-    [NSURLConnection sendAsynchronousRequest:request queue:backgroundqueue completionHandler:^(NSURLResponse *response, NSData *data, NSError *error){
-        
-        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
-        
-        if (error != nil || data.length == 0) {
-            NSLog(@"%@",error);
+        if (headerTitle) {
+            self.title = headerTitle;
         }
-        else if (httpResponse.statusCode == 200 && data.length > 0){
-            NSLog(@"%@",data);
+        //Handle Error
+        if (error) {
+
         }
-        
+        else{
+            //Reload Table
+            
+        }
     }];
     
 }
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

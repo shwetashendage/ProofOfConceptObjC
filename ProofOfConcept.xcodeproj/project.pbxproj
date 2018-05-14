@@ -13,6 +13,14 @@
 		E4D0F07520A961B9006FB7F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0F07420A961B9006FB7F0 /* main.m */; };
 		E4D0F07F20A961B9006FB7F0 /* ProofOfConceptTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0F07E20A961B9006FB7F0 /* ProofOfConceptTests.m */; };
 		E4D0F08A20A961B9006FB7F0 /* ProofOfConceptUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0F08920A961B9006FB7F0 /* ProofOfConceptUITests.m */; };
+		E4D0F09E20A99719006FB7F0 /* POCFacts.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0F09D20A99719006FB7F0 /* POCFacts.m */; };
+		E4D0F09F20A99719006FB7F0 /* POCFacts.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0F09D20A99719006FB7F0 /* POCFacts.m */; };
+		E4D0F0A020A99719006FB7F0 /* POCFacts.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0F09D20A99719006FB7F0 /* POCFacts.m */; };
+		E4D0F0A820A99F11006FB7F0 /* ProofOfConceptParseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0F0A720A99F11006FB7F0 /* ProofOfConceptParseTests.m */; };
+		E4D0F0B120A9A66E006FB7F0 /* POCService.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0F0B020A9A66E006FB7F0 /* POCService.m */; };
+		E4D0F0B220A9A66E006FB7F0 /* POCService.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0F0B020A9A66E006FB7F0 /* POCService.m */; };
+		E4D0F0B320A9A66E006FB7F0 /* POCService.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0F0B020A9A66E006FB7F0 /* POCService.m */; };
+		E4D0F0B420A9A66E006FB7F0 /* POCService.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0F0B020A9A66E006FB7F0 /* POCService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,6 +32,13 @@
 			remoteInfo = ProofOfConcept;
 		};
 		E4D0F08620A961B9006FB7F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4D0F05A20A961B9006FB7F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E4D0F06120A961B9006FB7F0;
+			remoteInfo = ProofOfConcept;
+		};
+		E4D0F0AA20A99F12006FB7F0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E4D0F05A20A961B9006FB7F0 /* Project object */;
 			proxyType = 1;
@@ -48,6 +63,13 @@
 		E4D0F08920A961B9006FB7F0 /* ProofOfConceptUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProofOfConceptUITests.m; sourceTree = "<group>"; };
 		E4D0F08B20A961B9006FB7F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4D0F09920A989C7006FB7F0 /* POCConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POCConstants.h; sourceTree = "<group>"; };
+		E4D0F09C20A99719006FB7F0 /* POCFacts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = POCFacts.h; sourceTree = "<group>"; };
+		E4D0F09D20A99719006FB7F0 /* POCFacts.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = POCFacts.m; sourceTree = "<group>"; };
+		E4D0F0A520A99F11006FB7F0 /* ProofOfConceptParseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProofOfConceptParseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4D0F0A720A99F11006FB7F0 /* ProofOfConceptParseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProofOfConceptParseTests.m; sourceTree = "<group>"; };
+		E4D0F0A920A99F11006FB7F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4D0F0AF20A9A66E006FB7F0 /* POCService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = POCService.h; sourceTree = "<group>"; };
+		E4D0F0B020A9A66E006FB7F0 /* POCService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = POCService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +94,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E4D0F0A220A99F11006FB7F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,6 +110,7 @@
 				E4D0F06420A961B9006FB7F0 /* ProofOfConcept */,
 				E4D0F07D20A961B9006FB7F0 /* ProofOfConceptTests */,
 				E4D0F08820A961B9006FB7F0 /* ProofOfConceptUITests */,
+				E4D0F0A620A99F11006FB7F0 /* ProofOfConceptParseTests */,
 				E4D0F06320A961B9006FB7F0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,6 +121,7 @@
 				E4D0F06220A961B9006FB7F0 /* ProofOfConcept.app */,
 				E4D0F07A20A961B9006FB7F0 /* ProofOfConceptTests.xctest */,
 				E4D0F08520A961B9006FB7F0 /* ProofOfConceptUITests.xctest */,
+				E4D0F0A520A99F11006FB7F0 /* ProofOfConceptParseTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,11 +131,13 @@
 			children = (
 				E4D0F06520A961B9006FB7F0 /* AppDelegate.h */,
 				E4D0F06620A961B9006FB7F0 /* AppDelegate.m */,
+				E4D0F09B20A996F3006FB7F0 /* Model */,
 				E4D0F09A20A98A41006FB7F0 /* Controller */,
-				E4D0F09920A989C7006FB7F0 /* POCConstants.h */,
+				E4D0F0B520A9ABBE006FB7F0 /* Networking */,
 				E4D0F06E20A961B9006FB7F0 /* Assets.xcassets */,
 				E4D0F07320A961B9006FB7F0 /* Info.plist */,
 				E4D0F07420A961B9006FB7F0 /* main.m */,
+				E4D0F09920A989C7006FB7F0 /* POCConstants.h */,
 			);
 			path = ProofOfConcept;
 			sourceTree = "<group>";
@@ -134,6 +167,33 @@
 				E4D0F06920A961B9006FB7F0 /* POCViewController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		E4D0F09B20A996F3006FB7F0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E4D0F09C20A99719006FB7F0 /* POCFacts.h */,
+				E4D0F09D20A99719006FB7F0 /* POCFacts.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E4D0F0A620A99F11006FB7F0 /* ProofOfConceptParseTests */ = {
+			isa = PBXGroup;
+			children = (
+				E4D0F0A720A99F11006FB7F0 /* ProofOfConceptParseTests.m */,
+				E4D0F0A920A99F11006FB7F0 /* Info.plist */,
+			);
+			path = ProofOfConceptParseTests;
+			sourceTree = "<group>";
+		};
+		E4D0F0B520A9ABBE006FB7F0 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				E4D0F0AF20A9A66E006FB7F0 /* POCService.h */,
+				E4D0F0B020A9A66E006FB7F0 /* POCService.m */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +252,24 @@
 			productReference = E4D0F08520A961B9006FB7F0 /* ProofOfConceptUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		E4D0F0A420A99F11006FB7F0 /* ProofOfConceptParseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4D0F0AC20A99F12006FB7F0 /* Build configuration list for PBXNativeTarget "ProofOfConceptParseTests" */;
+			buildPhases = (
+				E4D0F0A120A99F11006FB7F0 /* Sources */,
+				E4D0F0A220A99F11006FB7F0 /* Frameworks */,
+				E4D0F0A320A99F11006FB7F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E4D0F0AB20A99F12006FB7F0 /* PBXTargetDependency */,
+			);
+			name = ProofOfConceptParseTests;
+			productName = ProofOfConceptParseTests;
+			productReference = E4D0F0A520A99F11006FB7F0 /* ProofOfConceptParseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -215,6 +293,11 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = E4D0F06120A961B9006FB7F0;
 					};
+					E4D0F0A420A99F11006FB7F0 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E4D0F06120A961B9006FB7F0;
+					};
 				};
 			};
 			buildConfigurationList = E4D0F05D20A961B9006FB7F0 /* Build configuration list for PBXProject "ProofOfConcept" */;
@@ -233,6 +316,7 @@
 				E4D0F06120A961B9006FB7F0 /* ProofOfConcept */,
 				E4D0F07920A961B9006FB7F0 /* ProofOfConceptTests */,
 				E4D0F08420A961B9006FB7F0 /* ProofOfConceptUITests */,
+				E4D0F0A420A99F11006FB7F0 /* ProofOfConceptParseTests */,
 			);
 		};
 /* End PBXProject section */
@@ -260,6 +344,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E4D0F0A320A99F11006FB7F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -267,9 +358,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4D0F09E20A99719006FB7F0 /* POCFacts.m in Sources */,
 				E4D0F06A20A961B9006FB7F0 /* POCViewController.m in Sources */,
 				E4D0F07520A961B9006FB7F0 /* main.m in Sources */,
 				E4D0F06720A961B9006FB7F0 /* AppDelegate.m in Sources */,
+				E4D0F0B120A9A66E006FB7F0 /* POCService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +370,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4D0F09F20A99719006FB7F0 /* POCFacts.m in Sources */,
+				E4D0F0B220A9A66E006FB7F0 /* POCService.m in Sources */,
 				E4D0F07F20A961B9006FB7F0 /* ProofOfConceptTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,7 +380,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4D0F0A020A99719006FB7F0 /* POCFacts.m in Sources */,
+				E4D0F0B320A9A66E006FB7F0 /* POCService.m in Sources */,
 				E4D0F08A20A961B9006FB7F0 /* ProofOfConceptUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4D0F0A120A99F11006FB7F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4D0F0B420A9A66E006FB7F0 /* POCService.m in Sources */,
+				E4D0F0A820A99F11006FB7F0 /* ProofOfConceptParseTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +407,11 @@
 			isa = PBXTargetDependency;
 			target = E4D0F06120A961B9006FB7F0 /* ProofOfConcept */;
 			targetProxy = E4D0F08620A961B9006FB7F0 /* PBXContainerItemProxy */;
+		};
+		E4D0F0AB20A99F12006FB7F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E4D0F06120A961B9006FB7F0 /* ProofOfConcept */;
+			targetProxy = E4D0F0AA20A99F12006FB7F0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -493,6 +604,34 @@
 			};
 			name = Release;
 		};
+		E4D0F0AD20A99F12006FB7F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ProofOfConceptParseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Shweta.ProofOfConceptParseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProofOfConcept.app/ProofOfConcept";
+			};
+			name = Debug;
+		};
+		E4D0F0AE20A99F12006FB7F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ProofOfConceptParseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Shweta.ProofOfConceptParseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProofOfConcept.app/ProofOfConcept";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -528,6 +667,15 @@
 			buildConfigurations = (
 				E4D0F09520A961B9006FB7F0 /* Debug */,
 				E4D0F09620A961B9006FB7F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4D0F0AC20A99F12006FB7F0 /* Build configuration list for PBXNativeTarget "ProofOfConceptParseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4D0F0AD20A99F12006FB7F0 /* Debug */,
+				E4D0F0AE20A99F12006FB7F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
