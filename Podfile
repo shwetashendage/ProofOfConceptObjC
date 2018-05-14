@@ -5,7 +5,8 @@ target 'ProofOfConcept' do
     
     pod 'MBProgressHUD', '~> 1.1.0'
     pod 'Masonry'
-
+    pod 'SDWebImage', '~> 4.0'
+    
     target 'ProofOfConceptParseTests' do
         inherit! :search_paths
         # Pods for testing

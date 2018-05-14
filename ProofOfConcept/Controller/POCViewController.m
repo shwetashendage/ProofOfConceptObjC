@@ -16,6 +16,9 @@
 //Internet
 #import "POCInterNetConnectionService.h"
 
+//SDWebImage
+#import <SDWebImage/UIImageView+WebCache.h>
+
 @interface POCViewController ()
 @property (nonatomic, strong) NSMutableArray *factsArray;
 @property (nonatomic, strong) POCService *service;
@@ -96,7 +99,7 @@
     POCFacts *fact = [self.factsArray objectAtIndex:indexPath.row];
     cell.title.text = fact.title;
     cell.description.text = fact.descriptionString;
-    cell.profileImageView.image = [UIImage imageNamed:@"default-user-image"];
+    [cell.profileImageView sd_setImageWithURL:[NSURL URLWithString:fact.imageHref] placeholderImage:[UIImage imageNamed:@"default-user-image"]];
     
     return cell;
     
