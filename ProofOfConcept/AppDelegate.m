@@ -7,9 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "POCViewController.h"
 @interface AppDelegate ()
-@property (nonatomic, strong) ViewController *tableView;
+@property (nonatomic, strong) POCViewController *tableView;
 @end
 
 @implementation AppDelegate
@@ -19,7 +19,7 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     
-    self.tableView = [[ViewController alloc] initWithStyle:UITableViewStylePlain];
+    self.tableView = [[POCViewController alloc] initWithStyle:UITableViewStylePlain];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:self.tableView];
     
     self.window.rootViewController = navController;

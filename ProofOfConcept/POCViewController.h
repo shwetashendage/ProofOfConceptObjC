@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  POCViewController.h
 //  ProofOfConcept
 //
 //  Created by Shweta Shendage on 14/05/18.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UITableViewController
+@interface POCViewController : UITableViewController
 
 
 @end

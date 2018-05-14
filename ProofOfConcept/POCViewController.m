@@ -1,18 +1,18 @@
 //
-//  ViewController.m
+//  POCViewController.m
 //  ProofOfConcept
 //
 //  Created by Shweta Shendage on 14/05/18.
 //  Copyright © 2018 Shweta Shendage. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "POCViewController.h"
 
-@interface ViewController ()
+@interface POCViewController ()
 
 @end
 
-@implementation ViewController
+@implementation POCViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

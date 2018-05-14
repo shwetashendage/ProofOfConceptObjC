@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E4D0F06720A961B9006FB7F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0F06620A961B9006FB7F0 /* AppDelegate.m */; };
-		E4D0F06A20A961B9006FB7F0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0F06920A961B9006FB7F0 /* ViewController.m */; };
+		E4D0F06A20A961B9006FB7F0 /* POCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0F06920A961B9006FB7F0 /* POCViewController.m */; };
 		E4D0F06F20A961B9006FB7F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4D0F06E20A961B9006FB7F0 /* Assets.xcassets */; };
 		E4D0F07520A961B9006FB7F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0F07420A961B9006FB7F0 /* main.m */; };
 		E4D0F07F20A961B9006FB7F0 /* ProofOfConceptTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0F07E20A961B9006FB7F0 /* ProofOfConceptTests.m */; };
@@ -36,8 +36,8 @@
 		E4D0F06220A961B9006FB7F0 /* ProofOfConcept.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProofOfConcept.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D0F06520A961B9006FB7F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E4D0F06620A961B9006FB7F0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E4D0F06820A961B9006FB7F0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E4D0F06920A961B9006FB7F0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E4D0F06820A961B9006FB7F0 /* POCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = POCViewController.h; sourceTree = "<group>"; };
+		E4D0F06920A961B9006FB7F0 /* POCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = POCViewController.m; sourceTree = "<group>"; };
 		E4D0F06E20A961B9006FB7F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4D0F07320A961B9006FB7F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4D0F07420A961B9006FB7F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -99,8 +99,8 @@
 			children = (
 				E4D0F06520A961B9006FB7F0 /* AppDelegate.h */,
 				E4D0F06620A961B9006FB7F0 /* AppDelegate.m */,
-				E4D0F06820A961B9006FB7F0 /* ViewController.h */,
-				E4D0F06920A961B9006FB7F0 /* ViewController.m */,
+				E4D0F06820A961B9006FB7F0 /* POCViewController.h */,
+				E4D0F06920A961B9006FB7F0 /* POCViewController.m */,
 				E4D0F06E20A961B9006FB7F0 /* Assets.xcassets */,
 				E4D0F07320A961B9006FB7F0 /* Info.plist */,
 				E4D0F07420A961B9006FB7F0 /* main.m */,
@@ -257,7 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4D0F06A20A961B9006FB7F0 /* ViewController.m in Sources */,
+				E4D0F06A20A961B9006FB7F0 /* POCViewController.m in Sources */,
 				E4D0F07520A961B9006FB7F0 /* main.m in Sources */,
 				E4D0F06720A961B9006FB7F0 /* AppDelegate.m in Sources */,
 			);
