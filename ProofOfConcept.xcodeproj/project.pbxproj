@@ -47,6 +47,7 @@
 		E4D0F08520A961B9006FB7F0 /* ProofOfConceptUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProofOfConceptUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D0F08920A961B9006FB7F0 /* ProofOfConceptUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProofOfConceptUITests.m; sourceTree = "<group>"; };
 		E4D0F08B20A961B9006FB7F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4D0F09920A989C7006FB7F0 /* POCConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POCConstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +100,8 @@
 			children = (
 				E4D0F06520A961B9006FB7F0 /* AppDelegate.h */,
 				E4D0F06620A961B9006FB7F0 /* AppDelegate.m */,
-				E4D0F06820A961B9006FB7F0 /* POCViewController.h */,
-				E4D0F06920A961B9006FB7F0 /* POCViewController.m */,
+				E4D0F09A20A98A41006FB7F0 /* Controller */,
+				E4D0F09920A989C7006FB7F0 /* POCConstants.h */,
 				E4D0F06E20A961B9006FB7F0 /* Assets.xcassets */,
 				E4D0F07320A961B9006FB7F0 /* Info.plist */,
 				E4D0F07420A961B9006FB7F0 /* main.m */,
@@ -124,6 +125,15 @@
 				E4D0F08B20A961B9006FB7F0 /* Info.plist */,
 			);
 			path = ProofOfConceptUITests;
+			sourceTree = "<group>";
+		};
+		E4D0F09A20A98A41006FB7F0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E4D0F06820A961B9006FB7F0 /* POCViewController.h */,
+				E4D0F06920A961B9006FB7F0 /* POCViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
