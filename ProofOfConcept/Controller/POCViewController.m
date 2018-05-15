@@ -163,7 +163,11 @@
     POCFacts *fact = [self.factsArray objectAtIndex:indexPath.row];
     cell.title.text = fact.title;
     cell.description.text = fact.descriptionString;
-    [cell.profileImageView sd_setImageWithURL:[NSURL URLWithString:fact.imageHref] placeholderImage:[UIImage imageNamed:@"default-user-image"]];
+    [cell.activityIndicator startAnimating];
+    [cell.profileImageView sd_setImageWithURL:[NSURL URLWithString:fact.imageHref] placeholderImage:[UIImage imageNamed:@"default-user-image"] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+        [cell.activityIndicator stopAnimating];
+        
+    }];
     
     return cell;
     

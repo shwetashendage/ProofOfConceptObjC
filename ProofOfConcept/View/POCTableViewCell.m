@@ -7,11 +7,12 @@
 //
 
 #import "POCTableViewCell.h"
-
+#import "POCConstants.h"
 @implementation POCTableViewCell
 @synthesize title;
 @synthesize description;
 @synthesize profileImageView;
+@synthesize activityIndicator;
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     
@@ -33,13 +34,22 @@
         self.profileImageView = [[UIImageView alloc] init];
         [self.contentView addSubview:self.profileImageView];
         
-        UIEdgeInsets padding = UIEdgeInsetsMake(10, 10, 10, 10);
+        self.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        self.activityIndicator.hidesWhenStopped = TRUE;
+        [self.contentView addSubview:self.activityIndicator];
+        
+        UIEdgeInsets padding = UIEdgeInsetsMake(POCPadding, POCPadding, POCPadding, POCPadding);
         
         [self.profileImageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.contentView.mas_top).with.offset(padding.top);
             make.left.equalTo(self.contentView.mas_left).with.offset(padding.left);
             make.bottom.lessThanOrEqualTo(self.contentView.mas_bottom).with.offset(-padding.bottom);
-            make.width.height.mas_equalTo(100);
+            make.width.height.mas_equalTo(POCImageHeightWidth);
+        }];
+        
+        [self.activityIndicator mas_makeConstraints:^(MASConstraintMaker *make){
+            make.centerX.equalTo(self.profileImageView.mas_centerX);
+            make.centerY.equalTo(self.profileImageView.mas_centerY);
         }];
         
         [self.title mas_makeConstraints:^(MASConstraintMaker *make) {

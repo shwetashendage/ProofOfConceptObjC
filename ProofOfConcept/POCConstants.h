@@ -17,5 +17,8 @@
 
 #define POCTableViewAccessibilityID @"factsTableView"
 
+#define POCPadding 10
+
+#define POCImageHeightWidth 100
 
 #endif /* POCConstants_h */

@@ -14,5 +14,6 @@
 @property (nonatomic, strong) UILabel *title;
 @property (nonatomic, strong) UILabel *description;
 @property (nonatomic, strong) UIImageView *profileImageView;
+@property (nonatomic, strong) UIActivityIndicatorView *activityIndicator;
 
 @end
