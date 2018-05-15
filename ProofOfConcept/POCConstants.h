@@ -15,6 +15,7 @@
 
 #define POCCellID @"pocCell"
 
+#define POCTableViewAccessibilityID @"factsTableView"
 
 
 #endif /* POCConstants_h */

@@ -43,6 +43,7 @@
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 120;
     self.tableView.separatorInset = UIEdgeInsetsZero;
+    self.tableView.accessibilityIdentifier = POCTableViewAccessibilityID;
     
     if (@available(iOS 10.0, *)) {
         self.tableView.refreshControl = [[UIRefreshControl alloc] init];
